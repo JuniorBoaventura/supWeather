@@ -13,14 +13,13 @@ import Alamofire
 typealias Coordinates = (lat:Float, long: Float)
 
 enum APIRouter {
-    static let darkSkyBaseUrl  = "https://api.darksky.net/"
     
     case getForecast(Coordinates)
     
     var endpoint: String {
         switch self {
         case let .getForecast(coordinates):
-            return "forecast/\(coordinates.lat),\(coordinates.long)"
+            return "forecast/\(DarkSky.apiKey)/\(coordinates.lat),\(coordinates.long)"
         }
     }
     
@@ -28,7 +27,7 @@ enum APIRouter {
     var path: String {
         switch self {
         case .getForecast:
-            return APIRouter.darkSkyBaseUrl + self.endpoint
+            return DarkSky.baseUrl + self.endpoint
         }
         
     }

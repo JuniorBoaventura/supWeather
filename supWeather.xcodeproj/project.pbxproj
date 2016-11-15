@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		205474471DDB44460029686C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205474461DDB44460029686C /* AppDelegate.swift */; };
-		205474491DDB44460029686C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205474481DDB44460029686C /* ViewController.swift */; };
+		205474491DDB44460029686C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205474481DDB44460029686C /* HomeViewController.swift */; };
 		2054744C1DDB44460029686C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2054744A1DDB44460029686C /* Main.storyboard */; };
 		2054744F1DDB44460029686C /* supWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2054744D1DDB44460029686C /* supWeather.xcdatamodeld */; };
 		205474511DDB44460029686C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205474501DDB44460029686C /* Assets.xcassets */; };
 		205474541DDB44460029686C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205474521DDB44460029686C /* LaunchScreen.storyboard */; };
 		20E61E8F1DDB470500D68D87 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E8E1DDB470500D68D87 /* APIRouter.swift */; };
 		20E61E921DDB47C000D68D87 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E911DDB47C000D68D87 /* NetworkOperation.swift */; };
-		20E61E941DDB47DC00D68D87 /* GooAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E931DDB47DC00D68D87 /* GooAPIResult.swift */; };
+		20E61E941DDB47DC00D68D87 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E931DDB47DC00D68D87 /* APIResult.swift */; };
 		20E61E961DDB485D00D68D87 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E951DDB485D00D68D87 /* HTTPManager.swift */; };
+		20E61E991DDB538700D68D87 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E981DDB538700D68D87 /* R.generated.swift */; };
+		20E61E9C1DDB5C0A00D68D87 /* DarkSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E61E9B1DDB5C0A00D68D87 /* DarkSky.swift */; };
 		FEECD6CC380AA158A1D93270 /* Pods_supWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FF9647E216B7440A045ADD /* Pods_supWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		205474431DDB44460029686C /* supWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = supWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205474461DDB44460029686C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		205474481DDB44460029686C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		205474481DDB44460029686C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2054744B1DDB44460029686C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2054744E1DDB44460029686C /* supWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = supWeather.xcdatamodel; sourceTree = "<group>"; };
 		205474501DDB44460029686C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,8 +33,10 @@
 		205474551DDB44460029686C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20E61E8E1DDB470500D68D87 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		20E61E911DDB47C000D68D87 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
-		20E61E931DDB47DC00D68D87 /* GooAPIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooAPIResult.swift; sourceTree = "<group>"; };
+		20E61E931DDB47DC00D68D87 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		20E61E951DDB485D00D68D87 /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		20E61E981DDB538700D68D87 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		20E61E9B1DDB5C0A00D68D87 /* DarkSky.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSky.swift; sourceTree = "<group>"; };
 		33A6F4A2B9A2DB65AD3E7EBE /* Pods-supWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-supWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-supWeather/Pods-supWeather.release.xcconfig"; sourceTree = "<group>"; };
 		3428263DAF1CCEFC587EE923 /* Pods-supWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-supWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-supWeather/Pods-supWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		73FF9647E216B7440A045ADD /* Pods_supWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_supWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +57,7 @@
 		2054743A1DDB44460029686C = {
 			isa = PBXGroup;
 			children = (
+				20E61E981DDB538700D68D87 /* R.generated.swift */,
 				205474451DDB44460029686C /* supWeather */,
 				205474441DDB44460029686C /* Products */,
 				CBCC443B96A30E8DC8F43151 /* Pods */,
@@ -73,7 +78,7 @@
 			children = (
 				20E61E8D1DDB46EE00D68D87 /* API Manager */,
 				205474461DDB44460029686C /* AppDelegate.swift */,
-				205474481DDB44460029686C /* ViewController.swift */,
+				205474481DDB44460029686C /* HomeViewController.swift */,
 				2054744A1DDB44460029686C /* Main.storyboard */,
 				205474501DDB44460029686C /* Assets.xcassets */,
 				205474521DDB44460029686C /* LaunchScreen.storyboard */,
@@ -86,10 +91,11 @@
 		20E61E8D1DDB46EE00D68D87 /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
+				20E61E9A1DDB5BEF00D68D87 /* DarkSky */,
 				20E61E901DDB471200D68D87 /* Operations */,
 				20E61E8E1DDB470500D68D87 /* APIRouter.swift */,
 				20E61E911DDB47C000D68D87 /* NetworkOperation.swift */,
-				20E61E931DDB47DC00D68D87 /* GooAPIResult.swift */,
+				20E61E931DDB47DC00D68D87 /* APIResult.swift */,
 				20E61E951DDB485D00D68D87 /* HTTPManager.swift */,
 			);
 			name = "API Manager";
@@ -100,6 +106,14 @@
 			children = (
 			);
 			name = Operations;
+			sourceTree = "<group>";
+		};
+		20E61E9A1DDB5BEF00D68D87 /* DarkSky */ = {
+			isa = PBXGroup;
+			children = (
+				20E61E9B1DDB5C0A00D68D87 /* DarkSky.swift */,
+			);
+			name = DarkSky;
 			sourceTree = "<group>";
 		};
 		7273D2F913AE974C355897F4 /* Frameworks */ = {
@@ -127,6 +141,7 @@
 			buildConfigurationList = 205474581DDB44460029686C /* Build configuration list for PBXNativeTarget "supWeather" */;
 			buildPhases = (
 				C1F7BCCB3982A52DF28AA8A6 /* [CP] Check Pods Manifest.lock */,
+				20E61E971DDB519200D68D87 /* ShellScript */,
 				2054743F1DDB44460029686C /* Sources */,
 				205474401DDB44460029686C /* Frameworks */,
 				205474411DDB44460029686C /* Resources */,
@@ -189,6 +204,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20E61E971DDB519200D68D87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
 		30DAE587D5950A0B3E1B598A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,9 +272,11 @@
 				20E61E961DDB485D00D68D87 /* HTTPManager.swift in Sources */,
 				2054744F1DDB44460029686C /* supWeather.xcdatamodeld in Sources */,
 				20E61E8F1DDB470500D68D87 /* APIRouter.swift in Sources */,
+				20E61E991DDB538700D68D87 /* R.generated.swift in Sources */,
+				20E61E9C1DDB5C0A00D68D87 /* DarkSky.swift in Sources */,
 				20E61E921DDB47C000D68D87 /* NetworkOperation.swift in Sources */,
-				20E61E941DDB47DC00D68D87 /* GooAPIResult.swift in Sources */,
-				205474491DDB44460029686C /* ViewController.swift in Sources */,
+				20E61E941DDB47DC00D68D87 /* APIResult.swift in Sources */,
+				205474491DDB44460029686C /* HomeViewController.swift in Sources */,
 				205474471DDB44460029686C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

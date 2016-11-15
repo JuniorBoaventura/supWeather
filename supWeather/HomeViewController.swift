@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import Operations
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
+    
+    let operationQueue = OperationQueue()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let request = APIRouter.getForecast((lat: 48.8566, long: 2.3522))
+        
+        let getForecast = NetworkOperation(request: request) { (apiResult) in
+            print(apiResult.data)
+        }
+        
+        self.operationQueue.addOperation(getForecast)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
