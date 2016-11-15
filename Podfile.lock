@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (3.4.1)
+  - Operations (3.1.0):
+    - Operations/Standard (= 3.1.0)
+  - Operations/Standard (3.1.0)
+  - R.swift (2.4.0):
+    - R.swift.Library (~> 2.2.0)
+  - R.swift.Library (2.2.0)
+  - SwiftyJSON (2.3.2)
+  - Timberjack (0.0.2)
+
+DEPENDENCIES:
+  - Alamofire (= 3.4.1)
+  - Operations (= 3.1.0)
+  - R.swift (= 2.4.0)
+  - SwiftyJSON (= 2.3.2)
+  - Timberjack
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Operations: d09dbb1c32ce01061ebbb022c8a955b34fd9ec35
+  R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
+  R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Timberjack: 4181fb4fa5c0c02a0855deb5aa1ade6043db7b42
+
+PODFILE CHECKSUM: 0a25d8047aad946656fe0ca2da47cdcd0cadf12c
+
+COCOAPODS: 1.1.0.rc.2
