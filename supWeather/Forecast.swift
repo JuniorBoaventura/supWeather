@@ -7,92 +7,6 @@
 //
 
 import Foundation
-import UIKit
-
-
-enum WeatherType: String {
-    case clearDay   = "clear-day"
-    case clearNight = "clear-night"
-    case rain       = "rain"
-    case snow       = "snow"
-    case sleet      = "sleet"
-    case wind       = "wind"
-    case fog        = "fog"
-    case cloudy     = "cloudy"
-    case partlyCloudyDay = "partly-cloudy-day"
-    case partlyCloudyNight = "partly-cloudy-night"
-    case thunderstorm = "thunderstorm"
-    case tornado    = "tornado"
-    
-    var icon: UIImage? {
-        switch self {
-        case .clearDay:
-            return R.image.icClearDay()
-        case .clearNight:
-            return R.image.icMoon()
-        case .rain:
-            return R.image.icRain()
-        case .snow:
-            return R.image.icSnow()
-        case .wind:
-            return R.image.icWind()
-        case .cloudy, partlyCloudyDay, .partlyCloudyNight:
-            return R.image.icCloudy()
-        case .thunderstorm:
-            return R.image.icThunderstorm()
-        default:
-            return nil
-        }
-    }
-    
-    var summary: String? {
-        switch self {
-        case .clearDay:
-            return "Sunny"
-        case .rain:
-            return "Rain"
-        case .snow:
-            return "Snow"
-        case .wind:
-            return "Windy"
-        case .cloudy, partlyCloudyDay, .partlyCloudyNight:
-            return "Cloudy"
-        case .thunderstorm:
-            return "thunderstorm"
-        default:
-            return nil
-        }
-    }
-}
-
-enum WeekDay: Int{
-    case Monday = 1
-    case Tuesday = 2
-    case Wednesday = 3
-    case Thursday = 4
-    case Friday = 5
-    case Saturday = 6
-    case Sunday = 7
-    
-    var name: String {
-        switch self {
-        case .Monday:
-            return "Monday"
-        case .Tuesday:
-            return "Tuesday"
-        case .Wednesday:
-            return "Wednesday"
-        case .Thursday:
-            return "Thursday"
-        case .Friday:
-            return "Friday"
-        case .Saturday:
-            return "Saturday"
-        case .Sunday:
-            return "Sunday"
-        }
-    }
-}
 
 
 struct Forecast {
@@ -120,10 +34,10 @@ struct Forecast {
     var date: NSDate!
     var type: WeatherType?
     
-    var dayOfWeek: WeekDay {
+    var dayOfWeek: WeekDays {
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let weekDay = calendar.components(.Weekday, fromDate: self.date).weekday
-        return WeekDay(rawValue: weekDay)!
+        return WeekDays(rawValue: weekDay)!
     }
     
     init(data:[String:AnyObject]) {
