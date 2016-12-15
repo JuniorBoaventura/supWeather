@@ -11,4 +11,6 @@ target 'supWeather' do
   pod 'Operations', '3.1.0'
   pod 'Timberjack'
   pod 'R.swift', '2.4.0'
+  pod 'expanding-collection', '~> 0.3.2'
+  pod 'DynamicColor', '2.4.0'
 end

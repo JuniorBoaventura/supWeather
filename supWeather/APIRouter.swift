@@ -19,7 +19,7 @@ enum APIRouter {
     var endpoint: String {
         switch self {
         case let .getForecast(coordinates):
-            return "forecast/\(DarkSky.apiKey)/\(coordinates.lat),\(coordinates.long)"
+            return "forecast/\(DarkSky.apiKey)/\(coordinates.lat),\(coordinates.long)?units=si"
         }
     }
     
