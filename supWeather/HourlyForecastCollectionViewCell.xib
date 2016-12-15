@@ -23,9 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="73" height="90"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLe-4a-XGA">
-                        <rect key="frame" x="19" y="27" width="35" height="35"/>
+                        <rect key="frame" x="21.5" y="29.5" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="7mS-tQ-KXn"/>
+                            <constraint firstAttribute="height" constant="30" id="7mS-tQ-KXn"/>
                             <constraint firstAttribute="width" constant="50" id="H3u-yZ-brX"/>
                             <constraint firstAttribute="width" secondItem="XLe-4a-XGA" secondAttribute="height" multiplier="1:1" id="rsm-TU-n07"/>
                         </constraints>
@@ -36,13 +36,13 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 °" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-nF-BqF">
-                        <rect key="frame" x="24" y="67" width="25" height="17"/>
-                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                        <rect key="frame" x="23.5" y="64.5" width="26.5" height="18"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrN-59-cp0">
-                        <rect key="frame" x="25" y="8" width="24" height="14.5"/>
+                        <rect key="frame" x="25" y="10.5" width="24" height="14.5"/>
                         <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
                         <color key="textColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

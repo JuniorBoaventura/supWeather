@@ -42,10 +42,14 @@ extension HourlyForecastTableViewCell: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         let cell = cell as! HourlyForecastCollectionViewCell
         let prevision = self.hourly[indexPath.row]
-        
+
         cell.image.image = prevision.type?.icon
         cell.title.text = self.formatter.stringFromDate(prevision.date) + "h"
         cell.temperature.text = prevision.temperature
+        
+        if indexPath.row == 0 {
+            cell.title.text = "Now"
+        }
     }
     
 }
@@ -57,7 +61,7 @@ extension HourlyForecastTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.hourly.count ?? 0
+        return self.hourly.count > 12 ? 12 : self.hourly.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
