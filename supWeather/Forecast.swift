@@ -49,13 +49,25 @@ enum WeatherType: String {
 
 struct Forecast {
     private var __temperature:Float!
-    internal var temperature:String! {
+    internal var temperature:String? {
         return String(format: "%.0f", self.__temperature) + "°"
     }
+    
+    private var __temperatureMax:Float!
+    internal var temperatureMax:String? {
+        return String(format: "%.0f", self.__temperatureMax) + "°"
+    }
+    
+    private var __temperatureMin:Float!
+    internal var temperatureMin:String? {
+        return String(format: "%.0f", self.__temperatureMin) + "°"
+    }
+    
     private var __humidity: Float!
     internal var humidity: String! {
         return String(__humidity)
     }
+
     var summary: String?
     var date: NSDate!
     var type: WeatherType?
@@ -64,6 +76,14 @@ struct Forecast {
         
         if let temperature = data["temperature"] as? Float {
             self.__temperature = temperature
+        }
+        
+        if let temperatureMin = data["temperatureMin"] as? Float {
+            self.__temperatureMin = temperatureMin
+        }
+        
+        if let temperatureMax = data["temperatureMax"] as? Float {
+            self.__temperatureMax = temperatureMax
         }
         
         if let humidity = data["humidity"] as? Float {
