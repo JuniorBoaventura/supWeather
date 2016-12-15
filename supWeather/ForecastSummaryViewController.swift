@@ -16,16 +16,11 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
         // Do any additional setup after loading the view.
-        self.headerHeight = 350
+        self.headerHeight = 400
         self.tableView.allowsSelection = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     
     @IBAction func closeSummaryController(sender: AnyObject) {
@@ -33,6 +28,11 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
     }
     
     
+}
+
+
+// TableView Delegate & DataSource
+extension ForecastSummaryTableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
@@ -44,13 +44,20 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
-        if indexPath.row == 0 {
+        guard indexPath.row > 0 else {
             let cell = cell as! HourlyForecastTableViewCell
             cell.hourly = self.forecast.hourly
+            return
         }
-        
-        
-        
+    
+        let forecast             = self.forecast.daily[indexPath.row - 1]
+        let cell                 = cell as! DailyForecatTableViewCell
+    
+        cell.day.text            = forecast.dayOfWeek.name
+        cell.icon.image          = forecast.type?.icon
+        cell.temperatureMax.text = forecast.temperatureMax
+        cell.temperatureMin.text = forecast.temperatureMin
+        cell.summary.text        = forecast.type?.summary
         
     }
     
@@ -59,7 +66,7 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return self.forecast.daily.count + 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -71,7 +78,6 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(DailyForecatTableViewCell.identifier, forIndexPath: indexPath)
         return cell
-
+        
     }
-
 }

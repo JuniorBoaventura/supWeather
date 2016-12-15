@@ -3,9 +3,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
             <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
@@ -23,26 +25,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPy-Jm-flH">
                         <rect key="frame" x="0.0" y="0.0" width="214" height="264"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bOH-2l-N0D">
-                                <rect key="frame" x="0.0" y="176" width="214" height="88"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s8e-lp-BfI">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <connections>
-                                    <outlet property="dataSource" destination="gTV-IL-0wX" id="aWl-68-SB8"/>
-                                    <outlet property="delegate" destination="gTV-IL-0wX" id="60U-wo-bE9"/>
-                                </connections>
-                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ie-ci-dc1">
+                                <rect key="frame" x="0.0" y="187" width="214" height="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bOH-2l-N0D" firstAttribute="height" secondItem="CPy-Jm-flH" secondAttribute="height" multiplier="0.3333" id="J1A-Fb-yA3"/>
-                            <constraint firstItem="bOH-2l-N0D" firstAttribute="centerX" secondItem="CPy-Jm-flH" secondAttribute="centerX" id="P4B-GC-fft"/>
-                            <constraint firstAttribute="bottom" secondItem="bOH-2l-N0D" secondAttribute="bottom" id="TgK-Fq-hRd"/>
-                            <constraint firstItem="bOH-2l-N0D" firstAttribute="width" secondItem="CPy-Jm-flH" secondAttribute="width" id="fLF-Kx-YLt"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ie-ci-dc1" secondAttribute="trailing" id="AgY-BT-PJw"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ie-ci-dc1" secondAttribute="bottom" constant="60" id="I2B-o6-qAP"/>
+                            <constraint firstItem="2Ie-ci-dc1" firstAttribute="leading" secondItem="CPy-Jm-flH" secondAttribute="leading" id="JQo-1Y-xXY"/>
                             <constraint firstAttribute="width" constant="214" id="vvd-lu-gF9"/>
                             <constraint firstAttribute="height" constant="264" id="wKU-mW-CNT"/>
                         </constraints>
@@ -50,7 +44,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-nb-led">
                         <rect key="frame" x="0.0" y="0.0" width="214" height="264"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultCity" translatesAutoresizingMaskIntoConstraints="NO" id="5Lf-xE-CLL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Lf-xE-CLL">
                                 <rect key="frame" x="0.0" y="0.0" width="214" height="264"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8V-Zv-8Z1">
@@ -116,16 +110,14 @@
             <connections>
                 <outlet property="backConstraintY" destination="JX8-Ht-Mjf" id="yuB-db-8Pc"/>
                 <outlet property="backContainerView" destination="CPy-Jm-flH" id="CJi-Lz-EIR"/>
-                <outlet property="collectionView" destination="bOH-2l-N0D" id="Dvt-RM-rGh"/>
+                <outlet property="background" destination="5Lf-xE-CLL" id="W98-h1-d4D"/>
                 <outlet property="frontConstraintY" destination="I7l-B9-Fq6" id="1mL-Vw-htG"/>
                 <outlet property="frontContainerView" destination="WBY-nb-led" id="cYJ-HN-KUS"/>
                 <outlet property="place" destination="hft-XN-Rl0" id="dE5-Vw-ray"/>
+                <outlet property="summary" destination="2Ie-ci-dc1" id="TAt-V4-C4i"/>
                 <outlet property="temperature" destination="ujA-pJ-OcQ" id="r1q-eT-HQH"/>
             </connections>
             <point key="canvasLocation" x="503.5" y="506.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="defaultCity" width="940" height="1300"/>
-    </resources>
 </document>

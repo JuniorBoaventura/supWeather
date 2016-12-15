@@ -12,9 +12,13 @@ import SwiftyJSON
 
 struct Place {
     var name: String!
+    var image: UIImage?
+    
     var coordinates:Coordinates!
     var currently: Forecast!
+    
     var hourly = [Forecast]()
+    var daily  = [Forecast]()
     
     init(name: String, coordinates: Coordinates, result:JSON) {
         self.name = name
@@ -24,10 +28,18 @@ struct Place {
             self.currently = Forecast(data: currently)
         }
         
-        if let data = result["hourly"]["data"].array {
-            data.forEach({ (item) in
+        if let houlryData = result["hourly"]["data"].array {
+            houlryData.forEach({ (item) in
                 if let hour = item.dictionaryObject {
                     self.hourly.append(Forecast(data: hour))
+                }
+            })
+        }
+        
+        if let dailyData = result["daily"]["data"].array {
+            dailyData.forEach({ (item) in
+                if let hour = item.dictionaryObject {
+                    self.daily.append(Forecast(data: hour))
                 }
             })
         }

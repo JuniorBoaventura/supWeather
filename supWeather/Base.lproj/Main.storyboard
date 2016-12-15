@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -11,6 +12,7 @@
             <string>Lato-Medium</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
@@ -30,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaR-vc-1kl">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaR-vc-1kl">
                                 <rect key="frame" x="150" y="535" width="300" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5B-S2-Mca">
@@ -87,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DailyForecatTableViewCelll" rowHeight="65" id="Mxh-PY-Qyd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DailyForecatTableViewCell" rowHeight="65" id="Mxh-PY-Qyd" customClass="DailyForecatTableViewCell" customModule="supWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mxh-PY-Qyd" id="dRn-Cp-FMF">
@@ -97,30 +99,43 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYV-bU-lzJ">
                                             <rect key="frame" x="20" y="24" width="51" height="17"/>
                                             <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-rx-Phe">
-                                            <rect key="frame" x="557" y="24" width="22.5" height="17"/>
-                                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <rect key="frame" x="560.5" y="25.5" width="19" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                            <color key="textColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zxc-4c-fYG">
-                                            <rect key="frame" x="502" y="12" width="40" height="40"/>
+                                            <rect key="frame" x="485" y="17" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="Pui-R7-vER"/>
+                                                <constraint firstAttribute="width" secondItem="zxc-4c-fYG" secondAttribute="height" multiplier="1:1" id="GAT-xq-ie6"/>
+                                                <constraint firstAttribute="width" constant="30" id="Pui-R7-vER"/>
                                                 <constraint firstAttribute="height" constant="40" id="xxF-2u-snV"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="xxF-2u-snV"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgr-tf-omi">
-                                            <rect key="frame" x="448" y="24" width="38.5" height="17"/>
+                                            <rect key="frame" x="431" y="24" width="38.5" height="17"/>
                                             <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="14"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7d-3R-dSl">
+                                            <rect key="frame" x="530" y="24.5" width="20.5" height="16"/>
+                                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="K7d-3R-dSl" firstAttribute="centerY" secondItem="dRn-Cp-FMF" secondAttribute="centerY" id="5Vg-9A-uoJ"/>
                                         <constraint firstItem="wRb-rx-Phe" firstAttribute="centerY" secondItem="dRn-Cp-FMF" secondAttribute="centerY" id="5so-mT-vP0"/>
                                         <constraint firstAttribute="trailing" secondItem="wRb-rx-Phe" secondAttribute="trailing" constant="20" id="9sE-eM-1lo"/>
                                         <constraint firstItem="zxc-4c-fYG" firstAttribute="centerY" secondItem="dRn-Cp-FMF" secondAttribute="centerY" id="C2d-Q3-Ro5"/>
@@ -128,7 +143,8 @@
                                         <constraint firstItem="MYV-bU-lzJ" firstAttribute="leading" secondItem="dRn-Cp-FMF" secondAttribute="leading" constant="20" id="LjD-g3-YYs"/>
                                         <constraint firstAttribute="trailing" secondItem="zxc-4c-fYG" secondAttribute="trailing" constant="15" id="Me0-RA-jyq"/>
                                         <constraint firstItem="MYV-bU-lzJ" firstAttribute="centerY" secondItem="dRn-Cp-FMF" secondAttribute="centerY" id="R8n-r3-zbE"/>
-                                        <constraint firstItem="wRb-rx-Phe" firstAttribute="leading" secondItem="zxc-4c-fYG" secondAttribute="trailing" constant="15" id="VtW-de-u2S"/>
+                                        <constraint firstItem="wRb-rx-Phe" firstAttribute="leading" secondItem="K7d-3R-dSl" secondAttribute="trailing" constant="10" id="jky-vg-675"/>
+                                        <constraint firstItem="K7d-3R-dSl" firstAttribute="leading" secondItem="zxc-4c-fYG" secondAttribute="trailing" constant="15" id="y6H-MC-b3P"/>
                                         <constraint firstItem="zxc-4c-fYG" firstAttribute="leading" secondItem="jgr-tf-omi" secondAttribute="trailing" constant="15" id="yw6-Wa-BnU"/>
                                     </constraints>
                                     <variation key="default">
@@ -137,6 +153,13 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="day" destination="MYV-bU-lzJ" id="1xS-fc-aah"/>
+                                    <outlet property="icon" destination="zxc-4c-fYG" id="6ic-78-wkd"/>
+                                    <outlet property="summary" destination="jgr-tf-omi" id="3tO-kf-Ebr"/>
+                                    <outlet property="temperatureMax" destination="K7d-3R-dSl" id="EuB-6b-1k2"/>
+                                    <outlet property="temperatureMin" destination="wRb-rx-Phe" id="Z69-ms-qdS"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HourlyForecastTableViewCell" rowHeight="122" id="hin-bP-fsf" customClass="HourlyForecastTableViewCell" customModule="supWeather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="93" width="600" height="122"/>
@@ -191,6 +214,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fPA-2e-RIm">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="7tQ-IK-naN">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="closeSummaryController:" destination="HOc-eq-Ty4" id="1wA-Wz-xqX"/>
                             </connections>

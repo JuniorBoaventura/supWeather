@@ -23,9 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="73" height="90"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLe-4a-XGA">
-                        <rect key="frame" x="21.5" y="29.5" width="30" height="30"/>
+                        <rect key="frame" x="24" y="32" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="7mS-tQ-KXn"/>
+                            <constraint firstAttribute="height" constant="25" id="7mS-tQ-KXn"/>
                             <constraint firstAttribute="width" constant="50" id="H3u-yZ-brX"/>
                             <constraint firstAttribute="width" secondItem="XLe-4a-XGA" secondAttribute="height" multiplier="1:1" id="rsm-TU-n07"/>
                         </constraints>
@@ -36,9 +36,9 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 °" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-nF-BqF">
-                        <rect key="frame" x="23.5" y="64.5" width="26.5" height="18"/>
+                        <rect key="frame" x="23.5" y="64" width="26.5" height="18"/>
                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrN-59-cp0">
@@ -52,10 +52,10 @@
             </view>
             <constraints>
                 <constraint firstItem="XLe-4a-XGA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="AsR-8q-rhj"/>
-                <constraint firstItem="XLe-4a-XGA" firstAttribute="top" secondItem="FrN-59-cp0" secondAttribute="bottom" constant="5" id="Hy9-bJ-Cfe"/>
+                <constraint firstItem="XLe-4a-XGA" firstAttribute="top" secondItem="FrN-59-cp0" secondAttribute="bottom" constant="7" id="Hy9-bJ-Cfe"/>
                 <constraint firstItem="FrN-59-cp0" firstAttribute="centerX" secondItem="XLe-4a-XGA" secondAttribute="centerX" id="LKi-cO-HX4"/>
                 <constraint firstItem="XLe-4a-XGA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="RMK-uI-6XW"/>
-                <constraint firstItem="JBB-nF-BqF" firstAttribute="top" secondItem="XLe-4a-XGA" secondAttribute="bottom" constant="5" id="THv-Pr-6SJ"/>
+                <constraint firstItem="JBB-nF-BqF" firstAttribute="top" secondItem="XLe-4a-XGA" secondAttribute="bottom" constant="7" id="THv-Pr-6SJ"/>
                 <constraint firstItem="JBB-nF-BqF" firstAttribute="centerX" secondItem="XLe-4a-XGA" secondAttribute="centerX" id="ZZW-Q3-PZo"/>
             </constraints>
             <size key="customSize" width="73" height="81.5"/>

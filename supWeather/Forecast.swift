@@ -44,6 +44,54 @@ enum WeatherType: String {
             return nil
         }
     }
+    
+    var summary: String? {
+        switch self {
+        case .clearDay:
+            return "Sunny"
+        case .rain:
+            return "Rain"
+        case .snow:
+            return "Snow"
+        case .wind:
+            return "Windy"
+        case .cloudy, partlyCloudyDay, .partlyCloudyNight:
+            return "Cloudy"
+        case .thunderstorm:
+            return "thunderstorm"
+        default:
+            return nil
+        }
+    }
+}
+
+enum WeekDay: Int{
+    case Monday = 1
+    case Tuesday = 2
+    case Wednesday = 3
+    case Thursday = 4
+    case Friday = 5
+    case Saturday = 6
+    case Sunday = 7
+    
+    var name: String {
+        switch self {
+        case .Monday:
+            return "Monday"
+        case .Tuesday:
+            return "Tuesday"
+        case .Wednesday:
+            return "Wednesday"
+        case .Thursday:
+            return "Thursday"
+        case .Friday:
+            return "Friday"
+        case .Saturday:
+            return "Saturday"
+        case .Sunday:
+            return "Sunday"
+        }
+    }
 }
 
 
@@ -71,6 +119,12 @@ struct Forecast {
     var summary: String?
     var date: NSDate!
     var type: WeatherType?
+    
+    var dayOfWeek: WeekDay {
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let weekDay = calendar.components(.Weekday, fromDate: self.date).weekday
+        return WeekDay(rawValue: weekDay)!
+    }
     
     init(data:[String:AnyObject]) {
         
@@ -103,4 +157,6 @@ struct Forecast {
         }
         
     }
+    
+
 }
