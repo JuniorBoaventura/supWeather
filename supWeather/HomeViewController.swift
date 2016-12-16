@@ -34,10 +34,8 @@ class HomeViewController: ExpandingViewController {
 
     override func viewDidLoad() {
         
-        
-        
         self.view.backgroundColor = UIColor.clearColor()
-        let width = self.view.bounds.width - 100
+        let width = self.view.bounds.width - 160
         self.view.layer.addSublayer(self.gradient)
         self.view.bringSubviewToFront(self.footerView)
         itemSize = CGSize(width: width, height: width * 1.3)
@@ -47,30 +45,8 @@ class HomeViewController: ExpandingViewController {
         let forecastNib = R.nib.forecastCollectionViewCell()
         self.collectionView?.registerNib(forecastNib, forCellWithReuseIdentifier: ForecastCollectionViewCell.identifier)
         
-        
-   
-        
-
-
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        let city = R.image.city()
-        self.fetchForecast("New York", coordinates: (lat: 40.712784, long: -74.005941), image: city)
-        
-        let desert = R.image.desert()
-        self.fetchForecast("Las Vegas", coordinates: (lat: 36.169941, long: -115.139830), image: desert)
-        
-        let lake = R.image.lake()
-        self.fetchForecast("Minnetonka", coordinates: (lat: 44.918196, long: -93.463633), image: lake)
-        
-        let moutains = R.image.moutains()
-        self.fetchForecast("Neuchâtel", coordinates: (lat: 46.988138, long: -6.939626), image: moutains)
-        
-        
-        let operation = LocationOperation { (location, place) in
-            self.fetchForecast(place, coordinates: location, image: city)
-        }
-        self.operationQueue.addOperation(operation)
+        // Fetch the forecast
+        self.fetchForecast()
         
         
         if self.collectionView != nil {
@@ -84,7 +60,42 @@ class HomeViewController: ExpandingViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func fetchForecast(place: String, coordinates: Coordinates, image: UIImage?) {
+    func fetchForecast() {
+        if Reachability.isConnectedToNetwork() == true {
+            
+            let city = R.image.city()
+            self.forecastOperation("New York", coordinates: (lat: 40.712784, long: -74.005941), image: city)
+        
+            let desert = R.image.desert()
+            self.forecastOperation("Las Vegas", coordinates: (lat: 36.169941, long: -115.139830), image: desert)
+        
+            let lake = R.image.lake()
+            self.forecastOperation("Minnetonka", coordinates: (lat: 44.918196, long: -93.463633), image: lake)
+        
+            let moutains = R.image.moutains()
+            self.forecastOperation("Neuchâtel", coordinates: (lat: 46.988138, long: -6.939626), image: moutains)
+        
+        
+            let operation = LocationOperation { (location, place) in
+                self.forecastOperation(place, coordinates: location, image: city)
+            }
+        
+            self.operationQueue.addOperation(operation)
+        } else {
+            
+            let error = "Make sure your device is connected to the internet."
+            let noConnection = UIAlertController(title: "No Internet Connection", message: error, preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
+               
+            }
+            
+            noConnection.addAction(okAction)
+            self.presentViewController(noConnection, animated: true, completion: nil)
+        }
+    }
+    
+    func forecastOperation(place: String, coordinates: Coordinates, image: UIImage?) {
         
         
         let request = APIRouter.getForecast(coordinates)
@@ -104,6 +115,12 @@ class HomeViewController: ExpandingViewController {
         self.operationQueue.addOperation(getForecast)
     }
     
+
+    @IBAction func refresh(sender: AnyObject) {
+        self.cellsIsOpen.removeAll()
+        self.forecast.removeAll()
+        self.fetchForecast()
+    }
 
 }
 
@@ -166,6 +183,7 @@ extension HomeViewController {
         
         let indexPath = NSIndexPath(forItem: currentIndex, inSection: 0)
         guard let cell  = self.collectionView?.cellForItemAtIndexPath(indexPath) as? ForecastCollectionViewCell else { return }
+        
         // double swipe Up transition
         if cell.isOpened == true && sender.direction == .Up {
              self.displayForecastSummary(indexPath)

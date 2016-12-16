@@ -70,7 +70,14 @@
                             <constraint firstItem="PaR-vc-1kl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="erC-Zi-jgH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="V3i-FR-1ui"/>
+                    <navigationItem key="navigationItem" id="V3i-FR-1ui">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="SSe-va-xbs">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="9lL-8A-nDM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="PaR-vc-1kl" id="ayK-Pb-ZfW"/>
                         <segue destination="HOc-eq-Ty4" kind="show" id="Cpa-Ra-cCe"/>
