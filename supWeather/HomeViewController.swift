@@ -21,6 +21,8 @@ class HomeViewController: ExpandingViewController {
     let color1   = UIColor(hex: 0xdfecfc)
     let color2    = UIColor(hex: 0xb9d6f8)
     
+    var forecast = [Place]()
+    
     lazy var gradient:CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.locations = [0.0 , 1.1]
@@ -30,12 +32,10 @@ class HomeViewController: ExpandingViewController {
     }()
     
     
-    var forecast = [Place]()
-
     override func viewDidLoad() {
         
         self.view.backgroundColor = UIColor.clearColor()
-        let width = self.view.bounds.width - 160
+        let width = self.view.bounds.width - 120
         self.view.layer.addSublayer(self.gradient)
         self.view.bringSubviewToFront(self.footerView)
         itemSize = CGSize(width: width, height: width * 1.3)
@@ -162,6 +162,7 @@ extension HomeViewController {
         vc.navigationItem.hidesBackButton = true
         pushToViewController(vc)
     }
+
 }
 
 extension HomeViewController {

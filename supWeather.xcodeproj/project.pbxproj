@@ -49,7 +49,6 @@
 		20EC75931E018E75002428A4 /* ForecastSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC75921E018E75002428A4 /* ForecastSummaryViewController.swift */; };
 		20F789541DF6F86200CCE0E3 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F789531DF6F86200CCE0E3 /* Forecast.swift */; };
 		20F789561DF6FB9F00CCE0E3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F789551DF6FB9F00CCE0E3 /* Place.swift */; };
-		20F789581DF6FE3F00CCE0E3 /* ParseForecastOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F789571DF6FE3F00CCE0E3 /* ParseForecastOperation.swift */; };
 		20F7895C1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7895A1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.swift */; };
 		20F7895D1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7895B1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.xib */; };
 		FEECD6CC380AA158A1D93270 /* Pods_supWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FF9647E216B7440A045ADD /* Pods_supWeather.framework */; };
@@ -99,7 +98,6 @@
 		20EC75921E018E75002428A4 /* ForecastSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastSummaryViewController.swift; sourceTree = "<group>"; };
 		20F789531DF6F86200CCE0E3 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		20F789551DF6FB9F00CCE0E3 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		20F789571DF6FE3F00CCE0E3 /* ParseForecastOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseForecastOperation.swift; sourceTree = "<group>"; };
 		20F7895A1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		20F7895B1DF7159200CCE0E3 /* HourlyForecastCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourlyForecastCollectionViewCell.xib; sourceTree = "<group>"; };
 		33A6F4A2B9A2DB65AD3E7EBE /* Pods-supWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-supWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-supWeather/Pods-supWeather.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				20E61E911DDB47C000D68D87 /* NetworkOperation.swift */,
-				20F789571DF6FE3F00CCE0E3 /* ParseForecastOperation.swift */,
 				20B79CB41E03491A00E8D39D /* LocationOperation.swift */,
 			);
 			name = Operations;
@@ -492,7 +489,6 @@
 				2054744F1DDB44460029686C /* supWeather.xcdatamodeld in Sources */,
 				20E61E8F1DDB470500D68D87 /* APIRouter.swift in Sources */,
 				20F789541DF6F86200CCE0E3 /* Forecast.swift in Sources */,
-				20F789581DF6FE3F00CCE0E3 /* ParseForecastOperation.swift in Sources */,
 				20E61E991DDB538700D68D87 /* R.generated.swift in Sources */,
 				20E61E9C1DDB5C0A00D68D87 /* DarkSky.swift in Sources */,
 				20E61E921DDB47C000D68D87 /* NetworkOperation.swift in Sources */,

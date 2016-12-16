@@ -17,10 +17,9 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.headerHeight = 400
+        self.headerHeight = 300
         self.tableView.allowsSelection = false
     }
-
 
     
     @IBAction func closeSummaryController(sender: AnyObject) {

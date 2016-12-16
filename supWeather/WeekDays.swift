@@ -8,14 +8,15 @@
 
 import Foundation
 
-enum WeekDays: Int{
-    case Monday = 1
-    case Tuesday = 2
-    case Wednesday = 3
-    case Thursday = 4
-    case Friday = 5
-    case Saturday = 6
-    case Sunday = 7
+enum WeekDays: Int {
+    case Sunday = 1
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+    
     
     var name: String {
         switch self {

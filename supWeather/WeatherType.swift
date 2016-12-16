@@ -57,7 +57,7 @@ enum WeatherType: String {
         case .cloudy, partlyCloudyDay, .partlyCloudyNight:
             return "Cloudy"
         case .thunderstorm:
-            return "thunderstorm"
+            return "Thunderstorm"
         default:
             return nil
         }
