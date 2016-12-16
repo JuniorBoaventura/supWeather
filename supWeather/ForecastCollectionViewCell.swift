@@ -10,11 +10,12 @@ import UIKit
 import expanding_collection
 
 class ForecastCollectionViewCell: BasePageCollectionCell {
+    
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var background: UIImageView!
-    
     @IBOutlet weak var summary: UILabel!
+    
     var forecast: Place? {
         didSet {
             self.place.text = forecast?.name

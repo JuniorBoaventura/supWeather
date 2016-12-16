@@ -21,7 +21,6 @@ class ForecastSummaryTableViewController: ExpandingTableViewController {
         self.tableView.allowsSelection = false
     }
 
-
     
     @IBAction func closeSummaryController(sender: AnyObject) {
         popTransitionAnimation()

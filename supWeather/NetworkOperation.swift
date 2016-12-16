@@ -13,11 +13,9 @@ import SwiftyJSON
 
 typealias APIManagerCompletion = ((apiResult: APIResult) -> Void)
 
-@objc(NetworkOperation)
 class NetworkOperation: Operation {
     var request: APIRouter!
     var networkCompletion: APIManagerCompletion?
-    
     var result:APIResult = APIResult()
 
     required init(request: APIRouter, withcompletion completion: APIManagerCompletion?) {
@@ -28,10 +26,9 @@ class NetworkOperation: Operation {
     }
     
     override func execute() {
-       // #if DEBUG
-        print(self.request.parameters)
-       // #endif
-        HTTPManager.sharedManager.request(self.request.method, self.request.path, parameters: self.request.parameters, encoding: self.request.encoding, headers: self.request.headers)
+
+        HTTPManager.sharedManager
+        .request(self.request.method, self.request.path, parameters: self.request.parameters, encoding: self.request.encoding, headers: self.request.headers)
         .validate()
         .responseJSON { (response) in
 

@@ -23,7 +23,6 @@ enum APIRouter {
         }
     }
     
-    
     var path: String {
         switch self {
         case .getForecast:
